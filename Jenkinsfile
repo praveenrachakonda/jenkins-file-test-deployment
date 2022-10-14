@@ -2,7 +2,6 @@ pipeline {
     agent{
         docker {
             image 'salesforce/salesforcedx'
-            label 'sfdx'
         }    
     } 
     
