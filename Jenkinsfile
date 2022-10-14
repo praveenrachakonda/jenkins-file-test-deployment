@@ -1,20 +1,15 @@
 pipeline {
-    agent any
-
+    agent{
+        docker {
+            image 'salesforce/salesforcedx'
+            label 'sfdx'
+        }    
+    } 
+    
     stages {
-        stage('Build') {
+        stage('Hello') {
             steps {
-                echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'Hello World'
             }
         }
     }
